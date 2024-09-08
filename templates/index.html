@@ -16,6 +16,17 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      .my-form{
+        position: fixed;
+        bottom: 24px;
+        right: 80px;
+        left: 80px;
+        width: calc(100% - 160px);
+      }
+    </style>
+
   </head>
   <body>
     <nav class="navbar bg-body-tertiary">
@@ -27,15 +38,21 @@
     <div class="container">
       <div class="d-flex justify-content-end mt-5">
         <div class="card">
-          <div class="card-body">This is some text within a card body.</div>
+          <div class="card-body">Hallo!</div>
         </div>
       </div>
 
-      <div class="input-group mb-3">
+      <div class="d-flex justify-content-start mt-5">
+        <div class="card">
+          <div class="card-body">Hey, wie gehts?.</div>
+        </div>
+      </div>
+
+      <form class="input-group mb-3 my-form">
         <input
           type="text"
           class="form-control"
-          placeholder="Recipient's username"
+          placeholder="Bitte gebe deine Nachricht an"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
         />
@@ -43,9 +60,10 @@
           class="btn btn-outline-secondary"
           type="button"
           id="button-addon2">
-          Button
+          Senden
         </button>
-      </div>
+      </form>
     </div>
+
   </body>
 </html>
