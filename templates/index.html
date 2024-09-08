@@ -25,6 +25,14 @@
         left: 80px;
         width: calc(100% - 160px);
       }
+
+      .msg-date{
+        font-size: 10px;
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        color: rgba(0,0,0,0.5);
+      }
     </style>
   </head>
   <body>
@@ -45,6 +53,7 @@
             <b>{{ message.user }}:</b> 
             {{ message.content }}
             {%endif%}
+            <span class="msg-date">{{ message.created_at.strftime("%d.%m.%y %H:%M")}}</span>
           </div>
         </div>
       </div>
