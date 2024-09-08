@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -14,9 +14,9 @@ class Message(db.Model):
     content = db.Column(db.String(500), nullable=True)
     created_at = db.Column(db.DateTime(), default=datetime.utcnow)
 
-@app.route("/")
-def start_page():
-    return "<h1>Hello, World!</h1><a href='https://www.google.de/' >Google</a>"
+@app.route("/<name>")
+def start_page(name):
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
