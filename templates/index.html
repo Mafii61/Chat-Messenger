@@ -18,7 +18,7 @@
     ></script>
 
     <style>
-      .my-form{
+      .my-form {
         position: fixed;
         bottom: 24px;
         right: 80px;
@@ -26,7 +26,6 @@
         width: calc(100% - 160px);
       }
     </style>
-
   </head>
   <body>
     <nav class="navbar bg-body-tertiary">
@@ -36,34 +35,35 @@
     </nav>
 
     <div class="container">
-      <div class="d-flex justify-content-end mt-5">
+      {% for message in msgs %}
+      <div class="d-flex {% if name == message.user %}justify-content-end {% else %} justify-content-start {% endif %}mt-5">
         <div class="card">
-          <div class="card-body">Hallo!</div>
+          <div class="card-body">
+            {% if name == message.user %}
+            {{ message.content }}
+            {% else %} 
+            <b>{{ message.user }}:</b> 
+            {{ message.content }}
+            {%endif%}
+          </div>
         </div>
       </div>
+      {% endfor %}
 
-      <div class="d-flex justify-content-start mt-5">
-        <div class="card">
-          <div class="card-body">Hey, wie gehts?.</div>
-        </div>
-      </div>
-
-      <form class="input-group mb-3 my-form">
+      <form class="input-group mb-3 my-form" action="" method="POST">
         <input
           type="text"
+          name="text"
           class="form-control"
           placeholder="Bitte gebe deine Nachricht an"
-          aria-label="Recipient's username"
-          aria-describedby="button-addon2"
         />
         <button
           class="btn btn-outline-secondary"
-          type="button"
-          id="button-addon2">
+          type="submit"
+        >
           Senden
         </button>
       </form>
     </div>
-
   </body>
 </html>
