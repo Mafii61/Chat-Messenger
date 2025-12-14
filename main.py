@@ -14,11 +14,11 @@ class Message(db.Model):
     content = db.Column(db.String(500), nullable=True)
     created_at = db.Column(db.DateTime(), default=datetime.utcnow)
 
-@app.route("/<name>", methods=["GET", "POST"])
+@app.route("/chat/<name>", methods=["GET", "POST"])
 def start_page(name):
-    if request.method =="POST":
+    if request.method == "POST":
         new_message = Message(
-            user=name,
+            user = name,
             content = request.form["text"]
             
         )
@@ -28,4 +28,6 @@ def start_page(name):
     return render_template('index.html', msgs = messages, name=name)
 
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
