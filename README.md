@@ -4,8 +4,28 @@
 
 - Im folgenden ist ein Chat Messenger mit *Python* programmiert worden. Dabei wurde das Framework *Flask* benutzt.
 
-- Bevor Sie das programm starten und testen, im cmd folgendes eingeben damit Sie eine Datenbank aufstellen
-- Python
-- from main import db
-- db.create_all()
-- exit()
+## Setup
+
+### 1. Repository klonen
+git clone https://github.com/DEINNAME/Chat-Messenger.git
+cd Chat-Messenger
+
+### 2. Virtuelle Umgebung erstellen
+
+python -m venv env
+
+### 3. Virtuelle Umgebung aktivieren
+
+Windows (PowerShell):  env\Scripts\Activate.ps1
+
+Windows (cmd)::  env\Scripts\activate.bat
+
+macOS / Linux::  source env/bin/activate
+
+### 4. Bibliotheken installieren
+
+pip install -r requirements.txt
+
+### 5. App starten
+
+python main.py
