@@ -19,9 +19,9 @@ python -m venv env
 
 Windows (PowerShell):  env\Scripts\Activate.ps1
 
-Windows (cmd)::  env\Scripts\activate.bat
+Windows (cmd):  env\Scripts\activate.bat
 
-macOS / Linux::  source env/bin/activate
+macOS / Linux:  source env/bin/activate
 
 ### 4. Bibliotheken installieren
 
