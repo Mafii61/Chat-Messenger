@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environments
+env/
+venv/
+.venv/
+
+# Flask / SQLite
+*.db
+
+# VS Code
+.vscode/
