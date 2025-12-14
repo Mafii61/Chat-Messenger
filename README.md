@@ -7,7 +7,8 @@
 ## Setup
 
 ### 1. Repository klonen
-git clone https://github.com/DEINNAME/Chat-Messenger.git
+git clone https://github.com/Mafii61/Chat-Messenger.git
+
 cd Chat-Messenger
 
 ### 2. Virtuelle Umgebung erstellen
