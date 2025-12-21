@@ -1,8 +1,10 @@
-# Python-Flask-Website
+# Chat Messenger
 
-## Chat Messenger
+Ein einfacher Chat-Messenger, umgesetzt mit Python und dem Flask-Framework.
 
-- Im folgenden ist ein Chat Messenger mit *Python* programmiert worden. Dabei wurde das Framework *Flask* benutzt.
+## Voraussetzungen
+- Python 3.10+
+- Git
 
 ## Setup
 
@@ -17,7 +19,7 @@ python -m venv env
 
 ### 3. Virtuelle Umgebung aktivieren
 
-Windows (PowerShell):  env\Scripts\Activate.ps1
+Windows (PowerShell):  .env\Scripts\Activate.ps1
 
 Windows (cmd):  env\Scripts\activate.bat
 
