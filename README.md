@@ -2,6 +2,9 @@
 
 Ein einfacher Chat-Messenger, umgesetzt mit Python und dem Flask-Framework.
 
+Der Server läuft nur auf dem Localhost.
+Es gibt nur ein Chat, bei dem jeder Benutzer ist.
+
 ## Voraussetzungen
 - Python 3.10+
 - Git
