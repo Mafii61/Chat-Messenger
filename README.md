@@ -22,7 +22,7 @@ python -m venv env
 
 ### 3. Virtuelle Umgebung aktivieren
 
-Windows (PowerShell):  .env\Scripts\Activate.ps1
+Windows (PowerShell):  env\Scripts\Activate.ps1
 
 Windows (cmd):  env\Scripts\activate.bat
 
