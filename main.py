@@ -38,19 +38,6 @@ def chat(name):
     msgs = Message.query.order_by(Message.created_at).all()
     return render_template("chat.html", name=name, msgs=msgs)
 
-"""@app.route("/chat/<name>", methods=["GET", "POST"])
-def start_page(name):
-    if request.method == "POST":
-        new_message = Message(
-            user = name,
-            content = request.form["text"]
-        )
-        db.session.add(new_message)
-        db.session.commit()
-    messages = Message.query.order_by(Message.created_at).all()
-    return render_template('index.html', msgs = messages, name=name)
-"""
-
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
